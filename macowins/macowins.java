@@ -1,5 +1,12 @@
 
 
+// Requerimientos:
+// -Poder generar una Venta, la cual debe contener, fecha, prendas, cantidad de cada prenda, metodo de pago y poder calcular el interes correspondiente segun el mismo, 
+// como tambien el descuento correspondiente segun la prenda.
+// -Poder Calcular los descuentos
+// -Poder Calcular los intereses con tarjeta de Credito
+// -Poder Consultar todas las ganancias de una determinada fecha
+
 Int coeficienteFijo = settings.coeficienteFijo(); // asumo que voy a tener un settings file donde pueda conseguir este coeficiente fijo
 
 Class Usuario(){
@@ -105,4 +112,13 @@ getVentasByFecha(Date fecha){
     ventas = db.GetByFecha(fecha); //codigo simplificado para conseguir ventas segun fecha desde la DB
 
     return ventas;
+}
+
+calcularGananciasByFecha(Date fecha){
+    ventas = getVentasByFecha(Date fecha);
+
+    int ganancias = 0;
+    ventas.foreach(venta => ganancias+= venta.montoTotal);
+
+    return ganancias;
 }
