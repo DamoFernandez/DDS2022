@@ -1,0 +1,8 @@
+Public Enum CategoriaPrenda(){
+    ParteSuperior = 0;
+    ParteInferior = 1;
+    Calzado = 2;
+    Accesorio = 3;
+    
+    //Hacer todos las categorias necesarios
+}
