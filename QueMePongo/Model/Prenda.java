@@ -50,5 +50,3 @@ Public class PrendasException extends Exception(){
         Super("falta color secundario de la prenda")
     }
 }
-
-Prenda remeraMangasCortasAzul = new 
